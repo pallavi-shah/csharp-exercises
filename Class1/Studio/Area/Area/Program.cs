@@ -9,7 +9,7 @@ namespace Area
             double radius = 0;
             do
             {
-                Console.Write("Enter a radius: ");
+                Console.Write("\nEnter a radius: ");
                 string strRadius = Console.ReadLine();
                 if (strRadius == "")
                 {
@@ -23,14 +23,13 @@ namespace Area
                     }
                     catch
                     {
-                        Console.WriteLine("Error: Radius must be a number.");
+                        Console.WriteLine("Error: Radius must be a number.\n");
                         break;
                     }
                 }
                 if (radius<0)
                 {
                     Console.WriteLine("\nError: Radius must be Greater Than Zero: ");
-                    break;
                 }
                 else
                 {
