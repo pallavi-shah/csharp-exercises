@@ -44,6 +44,7 @@ namespace RegexExample
             }
             Console.ReadLine();
         }
+        /*   -------- Bonus mission-------(2) without using Regex-----for self reference
         static bool checkChar(char c)
         {
             if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
@@ -53,6 +54,7 @@ namespace RegexExample
             else
                 return false;
         }
+        */
 
     }
 
