@@ -1,1 +1,1 @@
-Hi, Welcome to Codsergirl! This is my first file for csharp studio.
+Hi, Welcome to Codergirl! This is my first file for csharp studio.

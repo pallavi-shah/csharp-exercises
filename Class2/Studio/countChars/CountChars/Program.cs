@@ -12,7 +12,9 @@ namespace RegexExample
             string text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc accumsan sem ut ligula scelerisque sollicitudin. Ut at sagittis augue. Praesent quis rhoncus justo. Aliquam erat volutpat. Donec sit amet suscipit metus, non lobortis massa. Vestibulum augue ex, dapibus ac suscipit vel, volutpat eget massa. Donec nec velit non ligula efficitur luctus.";
             //Console.Write("Enter a string: ");
             //text = Console.ReadLine();   //Bonus Mission----(3)
-            //text= System.IO.File.ReadAllText(@"C:\Users\conta\Desktop\codergirl\csharp-exercises\Class2\Studio\CountChars\studio2.txt");              // Bonus Mission---(4)
+           //var dir=Path.GetuFllPath(Path.Combine(AppContext.BaseDirectory))
+                .
+            text= System.IO.File.ReadAllText(@"C:\Users\conta\Desktop\codergirl\csharp-exercises\Class2\Studio\CountChars\studio2.txt");              // Bonus Mission---(4)
             Regex r = new Regex("^[a-zA-Z]"); // Bonus Mission---(2)
             text = text.ToLower(); // Bonus Mission---(1)
             int count = 0;
