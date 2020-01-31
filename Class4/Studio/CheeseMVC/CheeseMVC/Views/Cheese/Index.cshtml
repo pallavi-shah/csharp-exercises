@@ -1,0 +1,20 @@
+﻿
+@{
+
+}
+
+<h1 style="font-family:'Book Antiqua'">My Cheese</h1>
+<p><a asp-controller="cheese" asp-action="Add">Add Cheese</a> &nbsp;
+<a asp-controller="cheese" asp-action="Remove">Remove Cheese</a></p>
+
+@if (ViewBag.cheeses.Count == 0)
+{
+    <p> No Cheeses Yet!</p>
+}
+
+<ul>
+    @foreach (KeyValuePair<string, string> cheeses in ViewBag.cheeses)
+    {
+        <li><b>Cheese:</b> @cheeses.Key &nbsp;&nbsp;    <b>Description:</b> @cheeses.Value </li>
+    }
+</ul>
