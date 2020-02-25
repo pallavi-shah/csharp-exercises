@@ -12,20 +12,21 @@ namespace Restaurant
             MenuItem Item4 = new MenuItem("Cheese Pizza", 15, "Thin crust pizza topped with marinara sauce & Mozarella Cheese");
             Menu m1 = new Menu();
 
-            // method to Add MenuItem-Adding 3 Items
+            // method to Add MenuItem-Adding 4 Items
             Console.WriteLine("\n-------------------------------------------------------------------------");
-            Console.WriteLine("1.Displaying Menu after adding 3 items and if a Menu Item is new");
+            Console.WriteLine("1.Displaying Menu after adding 4 items and if a Menu Item is new");
             Console.WriteLine("-------------------------------------------------------------------------");
             m1.AddItem(Item1,DateTime.Now.Date);          
             m1.AddItem(Item2, DateTime.Today.AddMonths(-4));
             m1.AddItem(Item3,DateTime.Today.AddMonths(-2));
+            m1.AddItem(Item4, DateTime.Today);
             Console.WriteLine(m1.ToString());
 
             // method to Remove MenuItem- Removing 1 item
             Console.WriteLine("\n-------------------------------------------------------------------------");
             Console.WriteLine("2.Displaying Menu after removing 1 item");
             Console.WriteLine("-------------------------------------------------------------------------");
-            m1.RemoveItem(Item2,DateTime.Today.AddMonths(-1))   ;       
+            m1.RemoveItem(Item4,DateTime.Today.AddMonths(-1))   ;       
             Console.WriteLine(m1);
 
             //Method to Display a MenuItem'

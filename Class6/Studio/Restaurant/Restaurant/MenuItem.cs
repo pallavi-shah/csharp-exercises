@@ -54,6 +54,10 @@ namespace Restaurant
                 return this.ItemName == ((MenuItem)obj).ItemName && this.Price == ((MenuItem)obj).Price && this.Description == ((MenuItem)obj).Description;
         }
 
+        public override int GetHashCode()
+        {
+            return this.ItemName.GetHashCode()^ this.Price.GetHashCode()^this.Description.GetHashCode();
+        }
 
 
     }
