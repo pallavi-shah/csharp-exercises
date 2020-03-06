@@ -10,7 +10,7 @@ namespace QuizTime
         {
             MultipleChoiceQues mcq = new MultipleChoiceQues()
             {
-                Q = "What is USA Capital? (Select an option )",
+                Q = "What is the Capital of USA ? (Select an option )",
                 Options = { "New Jersey", "Washington, DC", "Calfornia" },
                 CorrectAnswer = 2
             };
