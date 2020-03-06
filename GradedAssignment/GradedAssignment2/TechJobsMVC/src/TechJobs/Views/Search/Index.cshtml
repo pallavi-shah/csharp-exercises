@@ -1,0 +1,66 @@
+﻿<h1>@ViewBag.title</h1>
+
+<form action="/Search/Results">
+    <h2>Search by:</h2>
+
+    <p>
+        @foreach (KeyValuePair<string, string> column in ViewBag.columns)
+        {
+        <span>
+            <!-- BONUS MISSION- To keep previous search field selected when displaying results -->
+            @{
+           
+             string var_checked = "";
+            }
+            
+            @if (column.Key == ViewBag.search_type) 
+            {
+                var_checked = "checked";
+            }
+
+            <input type="radio"
+                   name="searchType"
+                   id="@column.Key"
+                   value="@column.Key" 
+                  @var_checked />
+            <label for="@column.Key">@column.Value</label>
+        </span>
+        }
+    </p>
+
+    <p>
+        <label for="searchTerm">Keyword:</label>
+        <input type="text" name="searchTerm" id="searchTerm" />
+    </p>
+
+    <input type="submit" value="Search" />
+</form>
+
+<hr />
+
+@if (ViewBag.jobs != null)
+{
+    <h3>@ViewBag.jobs.Count Result(s)</h3>
+  
+    <!--TODO #2 - Loop over jobs dictionary and display all job fields-->
+    
+    @foreach (Dictionary<string, string> ListJobs in ViewBag.jobs)
+    {
+<table class="job-listing">
+    @foreach (KeyValuePair<string, string> job in ListJobs)
+    {
+
+        if (job.Key == "name")
+        {
+            <tr><td style="text-transform:uppercase">@job.Key</td> <td>@job.Value</td></tr>
+        }
+        else
+        {   <tr>
+             <td style="text-transform:uppercase">@job.Key</td>
+             <td><a asp-controller="List" asp-action="Jobs" asp-route-column="@job.Key" asp-route-value="@job.Value">@job.Value</a></td>
+            </tr>
+        }   
+    }
+</table>
+    }
+}
