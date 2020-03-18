@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+@*<h1>Welcome, @ViewBag.userObj.Username !</h1>*@  <!--Overwritten by the bonus mission reqt below-->
+<br />
+@*BONUS MISSION - 3 *@
+<h1 style="font-family:'Times New Roman', Times, serif">List of Users</h1>
+<br />
+    <ol>
+        @foreach (User u in ViewBag.userlist)
+        {
+            <li>
+                <a asp-controller="User" asp-action="Details" asp-route-userId="@u.UserId">@u.Username</a>@* bONUS MISSION 3 - LINK TO DISPLAY USER DETAILS*@
+            </li>
+        }
+
+    </ol>
+

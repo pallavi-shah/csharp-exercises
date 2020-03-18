@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewData["Title"] = "Add";
+}
+
+<h1 style="font-family:'Times New Roman', Times, serif">Create an Account</h1>
+<p style="color:red">@ViewBag.error</p><br />
+<form method="post">
+    <table>
+        <tr>
+            <td><b>Username</b></td>
+            @if (ViewBag.user_name ==null)
+            {
+                <td><input type="text" name="username" /></td>
+            }
+            else
+            {
+            <td><input type="text" name="username" value="@ViewBag.user_name" /></td>
+            }
+        </tr>
+        <tr>
+            <td><b>Email</b></td>
+            @if (ViewBag.user_email== null)
+            {
+                <td><input type="email" name="email" /></td>
+            }
+            else
+            {
+                <td><input type="email" name="email" value="@ViewBag.user_email" /></td>
+            }
+        </tr>
+
+        <tr>
+            <td><b>Password</b></td>
+            <td><input type="password" name="password" /></td>
+        </tr>
+
+        <tr>
+            <td><b>Verify Password</b></td>
+            <td><input type="password" name="verify" /></td>
+        </tr>
+
+        <tr>
+            <td><input type="submit" value="Submit" /></td>
+        </tr>
+
+    </table>
+</form>
+
+
+
+
+
+
+
+
