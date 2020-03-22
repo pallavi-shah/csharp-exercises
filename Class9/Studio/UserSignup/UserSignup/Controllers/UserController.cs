@@ -33,7 +33,7 @@ namespace UserSignup.Controllers
                     Username = vm.Username,
                     Email= vm.Email,
                     Password= vm.Password,
-                    SecretQuestion=vm.SecretQuestion,
+                   SecretQuestion=vm.SecretQuestion,
                     SecretAnswer=vm.SecretAnswer
                 };
                 UserData.Add(newUser);

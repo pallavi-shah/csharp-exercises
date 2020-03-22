@@ -13,19 +13,19 @@ namespace UserSignup.Models
         public DateTime UserDate = DateTime.Now;
         public string Password { get; set; }
 
-        public string SecretQuestion { get; set; }
+        
+        public string SecretQuestion {get; set; }
 
-        public string SecretAnswer { get; set; }
+    public string SecretAnswer { get; set; }
 
-        public int UserId;  
-
+        public int UserId;
+        
         private static int nextId = 1;
-       
+
         public User()
         {
             UserId = nextId;
             nextId++;
         }
     }
-
 }
