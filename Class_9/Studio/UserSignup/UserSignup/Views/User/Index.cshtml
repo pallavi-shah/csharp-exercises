@@ -1,0 +1,17 @@
+﻿@model List<UserSignup.Models.User>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 style="font-family:'Times New Roman', Times, serif">List of Users</h1>
+<br />
+    <ol>    
+        @foreach (User u in Model)
+        {
+            <li>
+                <a asp-controller="User" asp-action="Details" asp-route-userId="@u.UserId">@u.Username</a>
+            </li>
+        }
+
+    </ol>
+

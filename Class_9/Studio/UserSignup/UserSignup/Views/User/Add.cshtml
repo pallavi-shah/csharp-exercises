@@ -1,0 +1,56 @@
+﻿@model UserSignup.ViewModels.AddUserViewModel
+@{
+    ViewData["Title"] = "Add";
+}
+
+<h1 style="font-family:'Book Antiqua'">Create an Account</h1>
+<div style="width:300px">
+    <form asp-controller="User" asp-action="Add" method="post">
+
+        <div class="form-group">
+            <label asp-for="Username"></label>
+            <input class="form-control" asp-for="Username" />
+            <span asp-validation-for="Username"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Password"></label>
+            <input class="form-control"asp-for="Password" />
+            <span asp-validation-for="Password"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Verify"></label>
+            <input class="form-control" asp-for="Verify" />
+            <span asp-validation-for="Verify"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Email"></label>
+            <input class="form-control" asp-for="Email" />
+            <span asp-validation-for="Email"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="SecretQuestion"></label>
+            @*<input class="form-control" asp-for="SecretQuestion" />
+            <span asp-validation-for="SecretQuestion"></span>*@
+            <select asp-for="SecretQuestion" asp-items="Model.SecretQuestions"></select>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="SecretAnswer"></label>
+            <input class="form-control" asp-for="SecretAnswer" />
+            <span asp-validation-for="SecretAnswer"></span>
+        </div>
+
+        <input type="submit" value="Submit" />
+    </form>
+    </div>
+
+
+
+
+
+
+
