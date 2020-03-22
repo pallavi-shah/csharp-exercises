@@ -1,0 +1,55 @@
+﻿@model List<CheeseMVC.Models.Cheese>
+@{
+
+}
+<p>
+    <b style="font-family:'Book Antiqua'; font-size:x-large">My Cheese</b> &nbsp;&nbsp;
+    <a asp-controller="cheese" asp-action="Add">Add Cheese</a> &nbsp;&nbsp;
+    <a asp-controller="cheese" asp-action="Remove">Remove Cheese</a>
+</p>
+
+@if (Model.Count == 0)
+{
+    <p> No Cheeses Yet!</p>
+}
+else
+@*{
+    <br />
+    <p style="font-family:'Arial' ; font-weight:bold"> &emsp; Cheese  &emsp;  &emsp; &emsp; &nbsp; Description </p>
+    <hr />
+}
+
+<ul>
+    @foreach (Cheese c1 in Model)
+    {
+    <li> @c1.Name &emsp;  &emsp;@c1.Description &emsp;&emsp; @c1.Rating <a asp-controller="Cheese" asp-action="Edit" asp-route-cheeseId="@c1.CheeseID"> Edit </a></li>
+        
+    }
+</ul>*@
+    <br />
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Cheese Name</th>
+                <th>Description</th>
+                <th>Rating</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Cheese c1 in Model)
+            {
+                <tr>
+                    <td>@c1.Name</td>
+                    <td>@c1.Description</td>
+                    <td>@c1.Rating</td>
+                    <td>@c1.Type</td>
+                    <td><a asp-controller="Cheese" asp-action="Edit" asp-route-cheeseId="@c1.CheeseID"> Edit </a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+

@@ -1,0 +1,30 @@
+﻿
+@{
+}
+
+    <form method="post" action="/cheese/removeButton">
+        <br />
+
+        <h1 style="font-family:'Book Antiqua'; font-weight:bold ; font-size:x-large">Please select a Cheese to Remove</h1><br />
+
+        @foreach (Cheese c1 in ViewBag.listCheeses)
+        {
+            <input name="removeCheese" id="@c1.CheeseID" type="checkbox" value="@c1.CheeseID" />
+            <label for="@c1.CheeseID"> @c1.Name </label>
+            <br />
+        }
+
+        <br />
+        @if (ViewBag.listCheeses.Count == 0)
+        {
+            <p> No Cheeses Yet!</p>
+            <input type="submit" value="Remove Cheese" disabled />
+        }
+
+        @if (ViewBag.listCheeses.Count != 0)
+        {
+            <input type="submit" value="Remove Cheese" />
+        }
+    </form>
+        
+    

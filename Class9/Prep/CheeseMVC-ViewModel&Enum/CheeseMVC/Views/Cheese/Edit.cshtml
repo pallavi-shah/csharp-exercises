@@ -1,0 +1,27 @@
+﻿@model CheeseMVC.ViewModels.AddEditCheeseViewModel
+
+<br />
+<h1 style="font-family:'Book Antiqua'; font-size:x-large; font-weight:bold ">Edit Cheese: &nbsp; @Model.Name </h1>
+<br />
+
+<form asp-controller="Cheese" asp-action="Edit" method="post">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input class="form-control" asp-for="Name" />
+        <span asp-validation-for="Name" class="danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <input class="form-control" asp-for="Description" />
+        <span asp-validation-for="Description" class="danger"></span>
+    </div>
+
+    <input class="form-control" asp-for="CheeseID" hidden />
+    <input class="form-control" asp-for="Rating" hidden />
+
+
+    <input type="submit" value="Edit Cheese" class="btn btn-primary" />
+
+</form>
+
