@@ -33,12 +33,12 @@
 
         <div class="form-group">
             <label asp-for="SecretQuestion"></label>
-            @*<input class="form-control" asp-for="SecretQuestion" />
-            <span asp-validation-for="SecretQuestion"></span>*@
-            <select asp-for="SecretQuestion" asp-items="Model.SecretQuestions"></select>
+            @*<input class="form-control" asp-for="SecretQuestion" />*@
+            <select class="form-control" asp-for="SecretQuestion" asp-items="Model.SecretQuestions"></select>
+            <span asp-validation-for="SecretQuestion"></span>
         </div>
 
-        <div class="form-group">
+        <div class="form-group">    
             <label asp-for="SecretAnswer"></label>
             <input class="form-control" asp-for="SecretAnswer" />
             <span asp-validation-for="SecretAnswer"></span>

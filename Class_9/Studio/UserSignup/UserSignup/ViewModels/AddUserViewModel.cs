@@ -27,7 +27,10 @@ namespace UserSignup.ViewModels
         [Display(Name = "Verify Password")]
         public string Verify { get; set; }
 
+        [Required]
         public string SecretAnswer { get; set; }
+
+        [Required]
         public string SecretQuestion { get; set; }
 
         public List<SelectListItem> SecretQuestions = new List<SelectListItem>();
